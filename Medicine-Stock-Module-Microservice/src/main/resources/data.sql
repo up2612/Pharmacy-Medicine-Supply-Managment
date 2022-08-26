@@ -1,0 +1,10 @@
+insert into medicine_stock values (101, 'disaccharide gentiobiose, dicarboxylic acid crocetin', '2022-06-16', 'Crocin', 200, 'Healthy Pharmacy', 'General');
+insert into medicine_stock values ( 102,'miscellaneous GI agents', '2021-06-30', 'Misoprostol', 1000, 'Generation Pharmacy', 'Gynaecology');
+insert into medicine_stock values (103, 'Colloidal silicon dioxide, croscarmellose sodium, crospovidone, microcrystalline cellulose', '2021-07-01', 'Percocet', 500, 'Medilane Pharmacy', 'Orthopaedics');
+insert into medicine_stock values (104, 'Paracetamol , Acetaminophen', '2023-07-12', 'Dolo-650', 500, 'Healthy Pharmacy', 'General');
+insert into medicine_stock values ( 105,'Dusparsha, Eranda, Manjishta, Chithrakam', '2023-09-11', 'Orthoherb', 800, 'Best Care Pharmacy', 'Orthopaedics');
+insert into medicine_stock values ( 106,'Cephradine , Cephalosporin', '2024-08-11', 'Hilact', 600, 'Best Care Pharmacy', 'Gynaecology');
+insert into medicine_stock values ( 107,'sodium alginate 250 mg, sodium hydrogen carbonate 133.5 mg and calcium carbonate 80 mg', '2022-09-12', 'Gaviscon', 500, 'Medilane Pharmacy', 'General');
+insert into medicine_stock values (108,'ergocalciferol-D2, cholecalciferol-D3, alfacalcidol', '2022-09-03', 'Cholecalciferol', 300, 'Generation Pharmacy', 'Orthopaedics');
+insert into medicine_stock values (109, 'Dicycloverine, Dicyclomine+Paracetamol, Acetaminophen', '2022-08-11', 'Cyclopam', 450, 'Generation Pharmacy', 'Gynaecology');
+insert into medicine_stock values (110, 'sodium croscarmellose, dibasic calicum phosphate, magnesium stearate', '2022-08-11', 'Azithromycin', -1, 'Generation Pharmacy', 'Gynaecology');

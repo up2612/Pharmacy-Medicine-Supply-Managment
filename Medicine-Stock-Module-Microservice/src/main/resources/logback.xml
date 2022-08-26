@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+ <!--  <property name="LOG_PATTERN" value="%d{E HH:mm:ss dd/mm/yyyy} [%thread] [%level] [%logger{0}] - %msg %n" />
+-->
+    <property name="LOGS" value="./logs"/>
+    <!--  <property name="LOG_FILE_ERROR" value="D:/logslf4j/error.log"/>-->
+
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <appender name="LOG_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/Info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS}/archived/Info-%d{yyyy-MM-dd}.log</fileNamePattern>
+        <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+        <level>INFO</level>
+        <onMatch>ACCEPT</onMatch>
+        <onMismatch>DENY</onMismatch>
+    </filter>
+        <encoder>
+            <pattern>[%d{dd-MM-yyyy HH:mm:ss.SSSS}] [%thread] [%level] [%logger{0}] [%msg] %n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LOG_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/logfile.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS}/archived/Logfile-%d{yyyy-MM-dd}.log</fileNamePattern>
+        <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>FATAL</level>
+    </filter>
+        <encoder>
+            <pattern>[%d{dd-MM-yyyy HH:mm:ss.SSSS}] [%thread] [%level] [%logger{0}] [%msg] %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="FATAL">
+       <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger name="com.cognizant" additivity="false" level="ERROR">
+       <appender-ref ref="CONSOLE"/>
+       <appender-ref ref="LOG_INFO"/>
+       <appender-ref ref="LOG_ERROR"/>
+    </logger>
+
+</configuration>
